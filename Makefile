@@ -46,4 +46,4 @@ run-kernighan-lin: kernighan-lin
 
 # remove os arquivos objetos e os executáveis
 clean:
-rm -f *.o forca-bruta kernighan-lin
+	rm -f *.o forca-bruta kernighan-lin
