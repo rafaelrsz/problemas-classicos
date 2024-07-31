@@ -27,21 +27,23 @@ kernighan-lin.o: src/kernighan-lin.cpp
 # executa os dois algoritmos
 run: run-forca-bruta run-kernighan-lin
 
-# # executa o algoritmo 1 separadamente
-# run-forca-bruta: forca-bruta
-# 	./forca-bruta < $(input)
-
 # executa o algoritmo 1 separadamente
 run-forca-bruta: forca-bruta
-	powershell -Command "cat $(input) | ./forca-bruta"
+	cat $(input) | ./forca-bruta
 
 # executa o algoritmo 2 separadamente
 run-kernighan-lin: kernighan-lin
-	powershell -Command "cat $(input) | ./kernighan-lin"
+	cat $(input) | ./kernighan-lin
 
+# # executa o algoritmo 1 separadamente
+# run-forca-bruta: forca-bruta
+# 	powershell -Command "cat $(input) | ./forca-bruta"
+
+# # executa o algoritmo 2 separadamente
 # run-kernighan-lin: kernighan-lin
-# 	./kernighan-lin < $(input)
+# 	powershell -Command "cat $(input) | ./kernighan-lin"
+
 
 # remove os arquivos objetos e os executáveis
 clean:
-	rm -f *.o forca-bruta kernighan-lin
+rm -f *.o forca-bruta kernighan-lin
