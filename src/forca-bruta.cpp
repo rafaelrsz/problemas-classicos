@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <memory>
 #include <chrono>
 
 using namespace std;
@@ -11,6 +10,7 @@ using namespace std;
 typedef vector<int> vi;
 typedef vector<vector<int>> vvi;
 
+// Calcula o corte entre duas partições A e B
 int calculaCorte(vvi &MA, int n, vi &particaoA, vi &particaoB)
 {
   int valorCorte = 0;
@@ -34,6 +34,8 @@ int calculaCorte(vvi &MA, int n, vi &particaoA, vi &particaoB)
 pair<vi, vi> particionaForcaBruta(vvi &MA, int n, int &corteMinimo)
 {
   pair<vi, vi> particoesOtimas;
+
+  // Inicializa o vetor de partição, onde true representa vértices na partição A
   vi estaNaParticaoA(n);
   fill_n(estaNaParticaoA.begin(), n / 2, 1);
 
@@ -62,7 +64,7 @@ pair<vi, vi> particionaForcaBruta(vvi &MA, int n, int &corteMinimo)
     }
 
   } while (
-      std::prev_permutation(estaNaParticaoA.begin(), estaNaParticaoA.end()) &&
+      prev_permutation(estaNaParticaoA.begin(), estaNaParticaoA.end()) &&
       estaNaParticaoA[0]); // A validação estaNaParticaoA[0] evita partições equivalentes
 
   return particoesOtimas;
@@ -101,17 +103,18 @@ int main()
 
   // Execução do algoritmo
   int corteMinimo;
-  std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+  chrono::steady_clock::time_point begin = chrono::steady_clock::now();
   pair<vi, vi> particoesOtimas = particionaForcaBruta(MA, n, corteMinimo);
-  std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+  chrono::steady_clock::time_point end = chrono::steady_clock::now();
 
-  cout << "Valor do corte minimo:"
+  cout << "Valor do corte minimo: "
        << corteMinimo
        << endl;
 
   exibirParticoes(particoesOtimas, n);
 
-  cout << "Tempo de execução = " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << " ms" << std::endl;
+  cout << "Tempo de execucao = " << chrono::duration_cast<chrono::milliseconds>(end - begin).count() << " ms" << " | ";
+  cout << chrono::duration_cast<chrono::nanoseconds>(end - begin).count() << " ns" << endl;
 
   return 0;
 }
