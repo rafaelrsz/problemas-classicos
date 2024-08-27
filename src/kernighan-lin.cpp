@@ -215,6 +215,5 @@ int main()
   cout << "Tempo de execucao = " << chrono::duration_cast<chrono::milliseconds>(end - begin).count() << " ms" << " | ";
   cout << chrono::duration_cast<chrono::nanoseconds>(end - begin).count() << " ns" << endl;
 
-  system("pause");
   return 0;
 }
