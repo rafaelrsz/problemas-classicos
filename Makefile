@@ -35,15 +35,6 @@ run-forca-bruta: forca-bruta
 run-kernighan-lin: kernighan-lin
 	cat $(input) | ./kernighan-lin
 
-# # executa o algoritmo 1 separadamente
-# run-forca-bruta: forca-bruta
-# 	powershell -Command "cat $(input) | ./forca-bruta"
-
-# # executa o algoritmo 2 separadamente
-# run-kernighan-lin: kernighan-lin
-# 	powershell -Command "cat $(input) | ./kernighan-lin"
-
-
 # remove os arquivos objetos e os executáveis
 clean:
 	rm -f *.o forca-bruta kernighan-lin
