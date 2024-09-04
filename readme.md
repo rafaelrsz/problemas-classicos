@@ -6,7 +6,7 @@ Esse projeto foi desenvolvido como trabalho prático da disciplina GCC253 - Comp
 O objetivo do trabalho é estudar e apresentar um seminário sobre algum problema clássico da computação. Nesse repositório será encontrado um estudo sobre o problema da Partição de Grafos.
 
 >**Partição de Grafos (PG)**
->Dado um grafo não direcionado G com uma quantidade par de vértices, o objetivo é dividir o conjunto de vértices em dois grupos A,B de igual tamanho de tal forma que a quantidade de arestas entre os grupos deve ser minimizada. Portanto, a entrada é um grafo $G(V,E)$ e a saída são dois subconjuntos disjuntos de vértices $A, B \subseteq V$, tal que  $A \cap B = \emptyset.$.  
+>Dado um grafo não direcionado G com uma quantidade par de vértices, o objetivo é dividir o conjunto de vértices em dois grupos A,B de igual tamanho de tal forma que a quantidade de arestas entre os grupos deve ser minimizada. Portanto, a entrada é um grafo $G(V,E)$ e a saída são dois subconjuntos disjuntos de vértices $A, B \subseteq V$, tal que  $$A \cap B = \emptyset$$.
 
 
 ## :mag_right: Tópicos abordados
