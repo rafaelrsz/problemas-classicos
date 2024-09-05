@@ -37,7 +37,7 @@ make clean
 ```
 ## :book: Referências
 
-### Books
+### Livros
 
 - [Kahng, Lienig, Markov, Jin Hu (2011) - From Graph Partitioning to Timing Closure](https://ia903208.us.archive.org/0/items/VLSI_Physical_Design_From_Graph_Partitioning_to_Timing_Closure/VLSI_Physical_Design_From_Graph_Partitioning_to_Timing_Closure.pdf)
 
